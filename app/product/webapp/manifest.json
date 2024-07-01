@@ -1,7 +1,7 @@
 {
   "_version": "1.59.0",
   "sap.app": {
-    "id": "com.satinfotech.cloudapps.kitchen",
+    "id": "product",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.12.5",
-      "toolsId": "b29d55be-d56e-4ed9-93a4-5206505e2054"
+      "toolsId": "da184cbc-3c42-4d66-9ed3-009d26fb088e"
     },
     "dataSources": {
       "mainService": {
@@ -45,7 +45,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.124.0",
+      "minUI5Version": "1.125.1",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -61,7 +61,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "com.satinfotech.cloudapps.kitchen.i18n.i18n"
+          "bundleName": "product.i18n.i18n"
         }
       },
       "": {
@@ -87,42 +87,42 @@
       "routes": [
         {
           "pattern": ":?query:",
-          "name": "KitchenList",
-          "target": "KitchenList"
+          "name": "ProductLocalList",
+          "target": "ProductLocalList"
         },
         {
-          "pattern": "Kitchen({key}):?query:",
-          "name": "KitchenObjectPage",
-          "target": "KitchenObjectPage"
+          "pattern": "ProductLocal({key}):?query:",
+          "name": "ProductLocalObjectPage",
+          "target": "ProductLocalObjectPage"
         }
       ],
       "targets": {
-        "KitchenList": {
+        "ProductLocalList": {
           "type": "Component",
-          "id": "KitchenList",
+          "id": "ProductLocalList",
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "contextPath": "/Kitchen",
+              "contextPath": "/ProductLocal",
               "variantManagement": "Page",
               "navigation": {
-                "Kitchen": {
+                "ProductLocal": {
                   "detail": {
-                    "route": "KitchenObjectPage"
+                    "route": "ProductLocalObjectPage"
                   }
                 }
               }
             }
           }
         },
-        "KitchenObjectPage": {
+        "ProductLocalObjectPage": {
           "type": "Component",
-          "id": "KitchenObjectPage",
+          "id": "ProductLocalObjectPage",
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Kitchen"
+              "contextPath": "/ProductLocal"
             }
           }
         }

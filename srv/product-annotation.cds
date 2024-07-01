@@ -1,70 +1,53 @@
-using {CloudKitchen.Kitchen as Kitchen} from './cloudkitchen';
+using {CloudKitchen.ProductLocal as Product} from './cloudkitchen';
 
-annotate Kitchen with @(
-    UI.LineItem: [
+annotate Product with @(
+    UI.LineItem:[
         {
             $Type:'UI.DataField',
-            Value: name
-        },
-         {
-            $Type:'UI.DataField',
-            Value: addr1
-        },
-         {
-            $Type:'UI.DataField',
-            Value: addr2
+            Value: Product
         },
         {
             $Type:'UI.DataField',
-            Value: city
+            Value: ProductDescription
         },
         {
             $Type:'UI.DataField',
-            Value: state
+            Value: BaseUnit
         },
         {
             $Type:'UI.DataField',
-            Value: pincode
+            Value: ProductType
         },
         {
             $Type:'UI.DataField',
-            Value: phone
+            Value: ProductGroup
         },
-        
+
     ]
 );
-
-annotate Kitchen with @(
-    UI.FieldGroup #Kitchen : {
+annotate Product with @(
+    UI.FieldGroup #ProductLocal : {
         $Type : 'UI.FieldGroupType',
         Data : [
         {
             $Type:'UI.DataField',
-            Value: name
+            Value:  Product
         },
          {
             $Type:'UI.DataField',
-            Value: addr1
+            Value: ProductDescription
         },
          {
             $Type:'UI.DataField',
-            Value: addr2
+            Value: BaseUnit
         },
          {
             $Type:'UI.DataField',
-            Value: city
+            Value:  ProductType
         },
         {
             $Type:'UI.DataField',
-            Value: state
-        },
-        {
-            $Type:'UI.DataField',
-            Value: pincode
-        },
-        {
-            $Type:'UI.DataField',
-            Value: phone
+            Value:  ProductGroup
         },
     ]
     },
@@ -73,7 +56,8 @@ annotate Kitchen with @(
             $Type : 'UI.ReferenceFacet',
             ID : 'GeneratedFacet1',
             Label : 'General Information',
-            Target : '@UI.FieldGroup#Kitchen',
+            Target : '@UI.FieldGroup#ProductLocal',
         },
     ],
+    
 );

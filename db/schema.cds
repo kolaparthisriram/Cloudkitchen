@@ -17,4 +17,16 @@ entity Kitchen: managed, cuid {
     @title: 'Phone Number'
     phone: String(15);
 }
+entity ProductLocal: managed {
 
+    @title: 'Product ID'
+    key Product: String(40);
+    @title:'Product Type'
+    ProductType: String(4);
+    @title: 'Base Unit'
+    BaseUnit: String(3);
+    @title: 'Product Group'
+    ProductGroup: String(18);
+    @title: 'Product Description'
+    ProductDescription: String(40);
+}
